@@ -35,15 +35,14 @@ var calculateNumMissedDays = function() {
   for (var i = 0; i < Object.keys(attendance).length; i++) {
     var name = Object.keys(attendance)[i];
     var record = attendance[name];
-    console.log(record);
+    //console.log(record);
     var numDaysMissed = 0;
     for (var j = 0; j < record.length; j++) {
       if (record[j] == false) {
         numDaysMissed++;
       }
     }
-    console.log(name + " missed " + numDaysMissed + " days");
-    //model.numMissedDays[i] = numDaysMissed;
+    //console.log(name + " missed " + numDaysMissed + " days");
     returnArray[i] = numDaysMissed;
   }
   return returnArray;
@@ -79,17 +78,17 @@ var controller = {
     for (var i = 0; i < Object.keys(newRecord).length; i++) {
       var name = Object.keys(newRecord)[i];
       var record = newRecord[name];
-      console.log(record);
+      //console.log(record);
       var numDaysMissed = 0;
       for (var j = 0; j < record.length; j++) {
         if (record[j] == false) {
           numDaysMissed++;
         }
       }
-      console.log(name + " missed " + numDaysMissed + " days");
+      //console.log(name + " missed " + numDaysMissed + " days");
       model.numMissedDays[i] = numDaysMissed;
     }
-    console.log(model.numMissedDays);
+    //console.log(model.numMissedDays);
     return model.numMissedDays;
   },
 
